@@ -1,1 +1,26 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Logging you in…</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const code  = params.get('code');
+      const error = params.get('error');
+      if (code) {
+        window.location = 'trackcards://callback?code=' + encodeURIComponent(code);
+      } else if (error) {
+        window.location = 'trackcards://callback?error=' + encodeURIComponent(error);
+      } else {
+        document.body.textContent = 'No OAuth response received.';
+      }
+    })();
+  </script>
+</head>
+<body style="font-family:sans-serif;text-align:center;padding:2rem;">
+  <p>Finishing login…</p>
+</body>
+</html>
