@@ -15,29 +15,31 @@
     html {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       line-height: 1.5;
-      background-color: #fff;
-      color: #111;
+      background-color: #ffffff;  /* always white */
+      color: #111111;             /* always black text */
     }
     body {
       text-align: center;
       padding: 2rem 1rem;
       max-width: 800px;
       margin: 0 auto;
+      background-color: #ffffff;  /* always white */
+      color: #111111;             /* always black text */
     }
     h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
       font-weight: 700;
-      color: #111;
+      color: #111111;             /* black heading */
     }
     p.lead {
       font-size: 1.125rem;
-      color: #333;
+      color: #333333;             /* dark gray subhead */
       margin-bottom: 2rem;
     }
     p.small {
       font-size: 0.9rem;
-      color: #666;
+      color: #666666;             /* medium gray */
       margin-top: 0.5rem;
     }
     img {
@@ -59,16 +61,16 @@
       transition: opacity 0.2s ease;
     }
     .button-appstore {
-      margin-top: 1.5rem;
+      margin-top: 0.5rem;
     }
     .button-appstore img {
       height: 60px;
       width: auto;
     }
     .button-buy {
-      background: #111;
-      color: #fff;
-      border: 2px solid #111;
+      background: #111111;       /* black background */
+      color: #ffffff;            /* white text */
+      border: 2px solid #111111;
     }
     .button-buy:hover {
       opacity: 0.8;
@@ -83,7 +85,7 @@
       margin-bottom: 2rem;
     }
     .screenshots img {
-      border: 1px solid #ccc;
+      border: 1px solid #cccccc;
       border-radius: 12px;
     }
 
@@ -91,47 +93,15 @@
     footer {
       margin-top: 3rem;
       font-size: 0.85rem;
-      color: #666;
+      color: #666666;            /* medium gray */
     }
     footer a {
-      color: #111;
+      color: #111111;            /* black link text */
       text-decoration: none;
-      border-bottom: 1px dotted #666;
+      border-bottom: 1px dotted #666666;
     }
     footer a:hover {
       text-decoration: underline;
-    }
-
-    /* ── Dark Mode Support ── */
-    @media (prefers-color-scheme: dark) {
-      html {
-        background-color: #111;
-        color: #eee;
-      }
-      body {
-        background-color: #111;
-      }
-      p.lead {
-        color: #ddd;
-      }
-      .button-buy {
-        background: #eee;
-        color: #111;
-        border: 2px solid #eee;
-      }
-      .button-buy:hover {
-        opacity: 0.8;
-      }
-      footer {
-        color: #999;
-      }
-      footer a {
-        color: #eee;
-        border-bottom-color: #999;
-      }
-      .screenshots img {
-        border-color: #444;
-      }
     }
   </style>
 </head>
@@ -141,6 +111,11 @@
   <h1>Welcome to Muse</h1>
   <p class="lead">
     Muse lets you share your favorite playlists with a single tap—no typing, no scanning codes. It writes your Spotify playlist URL onto an NFC‐enabled card (or keychain), so anyone can tap and listen instantly.
+  </p>
+
+  <!-- ── Explicit Download Prompt ── -->
+  <p style="font-size: 1.125rem; margin-bottom: 0.5rem; color: #111111;">
+    Download from the App Store now:
   </p>
 
   <!-- ── App Store Badge (local JPEG) ── -->
@@ -157,7 +132,7 @@
 
   <!-- ── Short Description ── -->
   <p>Muse works like this:</p>
-  <ul style="text-align: left; display: inline-block; margin-top: 1rem; color: #444;">
+  <ul style="text-align: left; display: inline-block; margin-top: 1rem; color: #444444;">
     <li><strong>Create</strong> a “MuseTag” by choosing one of your Spotify playlists.</li>
     <li>Muse writes that playlist onto any blank NFC card (or keychain).</li>
     <li><strong>Share</strong> your card. Others simply tap it to open your playlist instantly in their Spotify app.</li>
@@ -165,7 +140,7 @@
 
   <!-- ── Buy Now Button (Shopify link) ── -->
   <p>
-    <a href="https://your-shopify-store.com/collections/all"
+    <a href="https://muse-app.info/"
        target="_blank" rel="noopener" class="button button-buy">
       Buy MuseCards &amp; Keychains →
     </a>
