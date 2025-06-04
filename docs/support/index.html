@@ -30,10 +30,31 @@
       margin-top: 2rem;
     }
     .faq-item {
-      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1rem 0;
+      cursor: pointer;
     }
-    .faq-item h3 {
-      margin-bottom: 0.5rem;
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.05rem;
+    }
+    .faq-answer {
+      margin-top: 0.5rem;
+      display: none;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+    .faq-item.active .arrow {
+      transform: rotate(90deg);
     }
     footer {
       margin-top: 3rem;
@@ -54,7 +75,7 @@
 
   <header>
     <h1>Muse App Support</h1>
-    <p>Your hub for help, answers, and contact</p>
+    <p>Your hub for help, answers, and assistance</p>
   </header>
 
   <main>
@@ -62,39 +83,69 @@
       <h2>Frequently Asked Questions</h2>
 
       <div class="faq-item">
-        <h3>How do I scan a TrackCard with Muse?</h3>
-        <p>Open the Muse app and tap “Scan TrackCard.” Hold your iPhone near the NFC card until you feel a vibration or see the playlist appear. Make sure NFC is enabled in your phone settings.</p>
+        <div class="faq-question">
+          <span>How do I scan a MuseTag with Muse?</span>
+          <span class="arrow">&#9656;</span>
+        </div>
+        <div class="faq-answer">
+          Open the Muse app and tap “Scan MuseTag.” Hold your iPhone near the MuseTag until a vibration or animation confirms a successful scan. Make sure NFC is enabled and you're using a compatible iPhone (iPhone 7 or newer).
+        </div>
       </div>
 
       <div class="faq-item">
-        <h3>My TrackCard isn’t scanning. What should I do?</h3>
-        <p>Ensure you are using a compatible iPhone (iPhone 7 or newer), hold the card near the top/back of your phone, and avoid metal interference. If the problem persists, contact us at <a href="mailto:privacy@muse-app.info">privacy@muse-app.info</a>.</p>
+        <div class="faq-question">
+          <span>My MuseTag isn’t scanning. What should I do?</span>
+          <span class="arrow">&#9656;</span>
+        </div>
+        <div class="faq-answer">
+          Ensure you are using a compatible iPhone and holding the MuseTag close to the top-back of the device. Avoid scanning near metal or other electronic devices. If issues persist, contact us at <a href="mailto:privacy@muse-app.info">privacy@muse-app.info</a>.
+        </div>
       </div>
 
       <div class="faq-item">
-        <h3>How can I favorite or delete a playlist?</h3>
-        <p>Once a playlist is scanned and added to your library, long-press it to reveal the options menu where you can favorite or delete it.</p>
+        <div class="faq-question">
+          <span>How can I edit or delete a playlist?</span>
+          <span class="arrow">&#9656;</span>
+        </div>
+        <div class="faq-answer">
+          To make changes, simply tap on the playlist you wish to modify. From there, select the “Edit” option to update or remove the playlist from your library.
+        </div>
       </div>
 
       <div class="faq-item">
-        <h3>How do I connect my Spotify account?</h3>
-        <p>Go to the “Settings” tab and press “Connect to Spotify.” A QR code or login screen will guide you through the Spotify authentication process.</p>
+        <div class="faq-question">
+          <span>How do I connect my Spotify account?</span>
+          <span class="arrow">&#9656;</span>
+        </div>
+        <div class="faq-answer">
+          Go to the “Settings” tab within the Muse app and tap “Connect to Spotify.” You'll be guided through the standard Spotify login flow to grant access securely.
+        </div>
       </div>
 
       <div class="faq-item">
-        <h3>Can I write to my own NFC cards?</h3>
-        <p>Currently, Muse only supports reading from pre-encoded TrackCards. Writing functionality is planned for future updates.</p>
+        <div class="faq-question">
+          <span>Can I write to my own NFC cards?</span>
+          <span class="arrow">&#9656;</span>
+        </div>
+        <div class="faq-answer">
+          Yes. Muse supports both reading from and writing to standard NFC cards. This enables users to personalize MuseTags with playlists or other supported data directly through the app.
+        </div>
       </div>
 
       <div class="faq-item">
-        <h3>Where can I get TrackCards?</h3>
-        <p>TrackCards are sold through our official store and authorized resellers. Stay tuned to our website or app announcements for availability.</p>
+        <div class="faq-question">
+          <span>Where can I get MuseTags?</span>
+          <span class="arrow">&#9656;</span>
+        </div>
+        <div class="faq-answer">
+          MuseTags are available through our official Shopify store. Please visit our website for a direct link to purchase authentic MuseTags.
+        </div>
       </div>
     </section>
 
     <section class="contact">
       <h2>Still need help?</h2>
-      <p>If your issue isn’t listed above, you can reach us directly at <a href="mailto:privacy@muse-app.info">privacy@muse-app.info</a>. We usually respond within 1–2 business days.</p>
+      <p>If your question wasn’t answered above, feel free to reach out to our team at <a href="mailto:privacy@muse-app.info">privacy@muse-app.info</a>. We typically respond within 1–2 business days.</p>
     </section>
   </main>
 
@@ -102,5 +153,12 @@
     &copy; 2025 Muse App. All rights reserved.
   </footer>
 
+  <script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 </html>
