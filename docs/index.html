@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <style>
-    /* ── Reset + Basic Typography ── */
+    /* Reset + Basic Typography */
     * {
       margin: 0;
       padding: 0;
@@ -15,31 +15,28 @@
     html {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       line-height: 1.5;
-      background-color: #ffffff;  /* always white */
-      color: #111111;             /* always black text */
+      background-color: #ffffff;
+      color: #111111;
     }
     body {
       text-align: center;
       padding: 2rem 1rem;
       max-width: 800px;
       margin: 0 auto;
-      background-color: #ffffff;  /* always white */
-      color: #111111;             /* always black text */
     }
     h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
       font-weight: 700;
-      color: #111111;             /* black heading */
     }
     p.lead {
       font-size: 1.125rem;
-      color: #333333;             /* dark gray subhead */
+      color: #333333;
       margin-bottom: 2rem;
     }
     p.small {
       font-size: 0.9rem;
-      color: #666666;             /* medium gray */
+      color: #666666;
       margin-top: 0.5rem;
     }
     img {
@@ -49,7 +46,7 @@
       margin: 0 auto;
     }
 
-    /* ── Buttons ── */
+    /* Buttons */
     .button {
       display: inline-block;
       margin: 1rem 0;
@@ -68,15 +65,15 @@
       width: auto;
     }
     .button-buy {
-      background: #111111;       /* black background */
-      color: #ffffff;            /* white text */
+      background: #111111;
+      color: #ffffff;
       border: 2px solid #111111;
     }
     .button-buy:hover {
       opacity: 0.8;
     }
 
-    /* ── Screenshot Gallery ── */
+    /* Screenshot Gallery */
     .screenshots {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -89,14 +86,14 @@
       border-radius: 12px;
     }
 
-    /* ── Footer ── */
+    /* Footer */
     footer {
       margin-top: 3rem;
       font-size: 0.85rem;
-      color: #666666;            /* medium gray */
+      color: #666666;
     }
     footer a {
-      color: #111111;            /* black link text */
+      color: #111111;
       text-decoration: none;
       border-bottom: 1px dotted #666666;
     }
@@ -107,48 +104,52 @@
 </head>
 
 <body>
-  <!-- ── Header ── -->
+  <!-- Header -->
   <h1>Welcome to Muse</h1>
   <p class="lead">
-    Muse lets you share your favorite playlists with a single tap—no typing, no scanning codes. It writes your Spotify playlist URL onto an NFC‐enabled card (or keychain), so anyone can tap and listen instantly.
+    Muse lets you share your favorite playlists with a single tap—no typing, no scanning codes. 
+    It writes your Spotify <em>or Apple Music</em> playlist URL onto an NFC card or keychain, so anyone can tap and listen instantly.
   </p>
 
-  <!-- ── Explicit Download Prompt ── -->
-  <p style="font-size: 1.125rem; margin-bottom: 0.5rem; color: #111111;">
+  <!-- Download Prompt -->
+  <p style="font-size: 1.125rem; margin-bottom: 0.5rem;">
     Download from the App Store now:
   </p>
-
-  <!-- ── App Store Badge (local JPEG) ── -->
-  <a href="https://apps.apple.com/us/app/muse-tap-to-listen/id6746702287"
+  <a href="https://apps.apple.com/us/app/muse-tap-to-listen/id6746774645"
      target="_blank" rel="noopener" class="button button-appstore">
     <img src="images/appstore-appicon.jpg" alt="Download on the App Store">
   </a>
 
-  <!-- ── Screenshot Gallery ── -->
+  <!-- Screenshots -->
   <div class="screenshots">
     <img src="screenshots/screenshot1.jpeg" alt="Muse App Screenshot 1">
     <img src="screenshots/screenshot2.jpeg" alt="Muse App Screenshot 2">
   </div>
 
-  <!-- ── Short Description ── -->
+  <!-- Description List -->
   <p>Muse works like this:</p>
   <ul style="text-align: left; display: inline-block; margin-top: 1rem; color: #444444;">
-    <li><strong>Create</strong> a “MuseTag” by choosing one of your Spotify playlists.</li>
+    <li><strong>Create</strong> a “MuseTag” by choosing one of your Spotify <em>or Apple Music</em> playlists.</li>
     <li>Muse writes that playlist onto any blank NFC card (or keychain).</li>
-    <li><strong>Share</strong> your card. Others simply tap it to open your playlist instantly in their Spotify app.</li>
+    <li><strong>Share</strong> your card. Others simply tap it to open your playlist instantly in their Spotify or Apple Music app.</li>
   </ul>
 
-  <!-- ── Buy Now Button (Shopify link) ── -->
+  <!-- Coming Soon for MuseCards -->
+  <p style="font-size: 1rem; font-weight: 500; color: #444444; margin-top: 2rem;">
+    🛍️ MuseCards & Keychains are coming soon! NFC-ready and beautifully designed for sharing your playlists in a tap.
+  </p>
+
+  <!-- Buy Now Button (Shopify link) -->
   <p>
     <a href="https://muse-app.info/"
        target="_blank" rel="noopener" class="button button-buy">
-      Buy MuseCards &amp; Keychains →
+      Buy MuseCards &amp; Keychains Soon→
     </a>
   </p>
 
-  <!-- ── Footer ── -->
+  <!-- Footer -->
   <footer>
-    <p>Learn more at <a href="https://muse-app.info/" target="_blank" rel="noopener">muse-app.info</a></p>
+    <p>Learn more at <a href="https://muse-app.info/support" target="_blank" rel="noopener">muse-app.info</a></p>
     <p>&copy; 2024 Muse, Inc.</p>
   </footer>
 </body>
